@@ -1,0 +1,31 @@
+@import "tailwindcss/preflight";
+@tailwind utilities;
+
+:root {
+  --foreground-rgb: 13, 13, 13;
+  --background-start-rgb: 35, 21, 64;
+  --background-end-rgb: 49, 31, 115;
+
+  /* Custom color variables */
+  --color-primary: #644BBF;
+  --color-secondary: #B78DF2;
+  --color-dark: #231540;
+  --color-darker: #0D0D0D;
+  --color-light: #B78DF2;
+}
+
+body {
+  color: rgb(var(--foreground-rgb));
+  background: linear-gradient(
+      to bottom,
+      transparent,
+      rgb(var(--background-end-rgb))
+    )
+    rgb(var(--background-start-rgb));
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+}
